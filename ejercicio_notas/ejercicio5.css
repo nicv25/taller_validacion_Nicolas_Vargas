@@ -1,0 +1,269 @@
+/* Sistema de Notas - Diseño moderno */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.form {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Header del formulario */
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.icon-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    color: white;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #718096;
+}
+
+/* Input groups */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 8px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    background: #f7fafc;
+    color: #2d3748;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #667eea;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.input.error {
+    border-color: #fc8181;
+    background: #fff5f5;
+}
+
+.input-grade {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Grid de notas */
+.grades-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* Mensajes de error */
+.error-message {
+    display: block;
+    color: #e53e3e;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 5px;
+    min-height: 16px;
+}
+
+/* Botón de envío */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.btn-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Tarjeta de resultado */
+.result-card {
+    background: linear-gradient(135deg, #f6f8fb 0%, #e9ecef 100%);
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 25px;
+    display: none;
+}
+
+.result-card.show {
+    display: block;
+    animation: slideIn 0.4s ease;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.result-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.result-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #667eea;
+}
+
+/* Badge de estado */
+.status-badge {
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.status-badge.approved {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(72, 187, 120, 0.3);
+}
+
+.status-badge.failed {
+    background: linear-gradient(135deg, #fc8181 0%, #f56565 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(252, 129, 129, 0.3);
+}
+
+/* Mensaje general */
+.mensaje {
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-align: center;
+    min-height: 20px;
+    margin-top: 15px;
+}
+
+.mensaje.exito {
+    background-color: #c6f6d5;
+    color: #22543d;
+    border: 2px solid #9ae6b4;
+}
+
+.mensaje.error {
+    background-color: #fed7d7;
+    color: #742a2a;
+    border: 2px solid #fc8181;
+}
+
+/* Animaciones */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ocultar flechas en input number */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .grades-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form {
+        padding: 25px;
+    }
+}
