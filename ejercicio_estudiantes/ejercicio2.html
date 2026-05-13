@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejercicio2.css">
+    <title>Ejercicio 2 - Registro de Estudiantes</title>
+</head>
+
+<body>
+    <form class="form" id="registerForm">
+        <p class="title">Registro de Estudiantes</p>
+
+        <!-- Nombre y Apellido -->
+        <div class="flex">
+            <label>
+                <input class="input" type="text" id="name" placeholder="" required="">
+                <span>Nombre</span>
+                <span class="error-message" id="errorName"></span>
+            </label>
+
+            <label>
+                <input class="input" type="text" id="lastname" placeholder="" required="">
+                <span>Apellido</span>
+                <span class="error-message" id="errorLastname"></span>
+            </label>
+        </div>
+
+        <!-- Email -->
+        <label>
+            <input class="input" type="email" id="email" placeholder="" required="">
+            <span>Email</span>
+            <span class="error-message" id="errorEmail"></span>
+        </label>
+
+        <!-- Edad -->
+        <label>
+            <input class="input" type="number" id="age" placeholder="" required="">
+            <span>Edad</span>
+            <span class="error-message" id="errorAge"></span>
+        </label>
+
+        <!-- Programa de formación -->
+        <label>
+            <input class="input" type="text" id="program" placeholder="" required="">
+            <span>Programa de formación</span>
+            <span class="error-message" id="errorProgram"></span>
+        </label>
+
+        <!-- Botón de envío -->
+        <button type="submit" class="submit">Registrar</button>
+
+        <!-- Mensaje de éxito/error -->
+        <div class="mensaje" id="mensaje"></div>
+    </form>
+
+    <script src="ejercicio2.js"></script>
+</body>
+
+</html>
