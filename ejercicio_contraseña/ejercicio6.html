@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejercicio6.css">
+    <title>Ejercicio 6 - Cambio de Contraseña</title>
+</head>
+<body>
+    <div class="container">
+        <form class="form" id="passwordForm">
+            <!-- Header -->
+            <div class="form-header">
+                <div class="icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lock-icon">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                </div>
+                <h1 class="title">Cambiar Contraseña</h1>
+                <p class="subtitle">Actualiza tu contraseña de forma segura</p>
+            </div>
+
+            <!-- Contraseña actual -->
+            <div class="input-wrapper">
+                <label class="label">Contraseña Actual</label>
+                <div class="password-container">
+                    <input 
+                        type="password" 
+                        id="currentPassword" 
+                        class="input" 
+                        placeholder="Ingrese su contraseña actual"
+                    >
+                    <button type="button" class="toggle-password" data-target="currentPassword">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-icon">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </button>
+                </div>
+                <span class="error-message" id="errorCurrentPassword"></span>
+            </div>
+
+            <!-- Nueva contraseña -->
+            <div class="input-wrapper">
+                <label class="label">Nueva Contraseña</label>
+                <div class="password-container">
+                    <input 
+                        type="password" 
+                        id="newPassword" 
+                        class="input" 
+                        placeholder="Mínimo 8 caracteres"
+                    >
+                    <button type="button" class="toggle-password" data-target="newPassword">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-icon">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </button>
+                </div>
+                <span class="error-message" id="errorNewPassword"></span>
+                
+                <!-- Indicador de fortaleza -->
+                <div class="strength-indicator" id="strengthIndicator">
+                    <div class="strength-bar" id="strengthBar"></div>
+                </div>
+                <p class="strength-text" id="strengthText"></p>
+            </div>
+
+            <!-- Confirmar contraseña -->
+            <div class="input-wrapper">
+                <label class="label">Confirmar Nueva Contraseña</label>
+                <div class="password-container">
+                    <input 
+                        type="password" 
+                        id="confirmPassword" 
+                        class="input" 
+                        placeholder="Repita la nueva contraseña"
+                    >
+                    <button type="button" class="toggle-password" data-target="confirmPassword">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-icon">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </button>
+                </div>
+                <span class="error-message" id="errorConfirmPassword"></span>
+            </div>
+
+            <!-- Requisitos de contraseña -->
+            <div class="requirements-box">
+                <p class="requirements-title">La contraseña debe cumplir:</p>
+                <ul class="requirements-list">
+                    <li id="req-length">
+                        <span class="check-icon">○</span>
+                        Mínimo 8 caracteres
+                    </li>
+                    <li id="req-uppercase">
+                        <span class="check-icon">○</span>
+                        Al menos una mayúscula
+                    </li>
+                    <li id="req-number">
+                        <span class="check-icon">○</span>
+                        Al menos un número
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Botón de envío -->
+            <button type="submit" class="submit-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Cambiar Contraseña</span>
+            </button>
+
+            <!-- Mensaje general -->
+            <div class="mensaje" id="mensaje"></div>
+        </form>
+    </div>
+
+    <script src="ejercicio6.js"></script>
+</body>
+</html>
