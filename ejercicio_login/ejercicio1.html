@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejercicio1.css">
+    <title>Ejercicio 1 - Login de Usuario</title>
+</head>
+
+<body>
+    <form class="form" id="loginForm">
+        <div class="title">Bienvenido,<br><span>inicia sesión para continuar</span></div>
+
+        
+        <input type="text" placeholder="Usuario" name="usuario" id="usuario" class="input">
+        <span class="error-message" id="errorUsuario"></span>
+
+        
+        <input type="password" placeholder="Contraseña" name="password" id="password" class="input">
+        <span class="error-message" id="errorPassword"></span>
+
+        
+        <button type="submit" class="button-confirm">Iniciar sesión →</button>
+
+        
+        <div class="mensaje" id="mensaje"></div>
+    </form>
+
+    <script src="ejercicio1.js"></script>
+</body>
+
+</html>
