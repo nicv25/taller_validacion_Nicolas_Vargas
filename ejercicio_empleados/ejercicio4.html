@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejercicio4.css">
+    <title>Ejercicio 4 - Registro de Empleados</title>
+</head>
+<body>
+    <form class="form" id="employeeForm">
+        <p class="title">Registro de Empleados</p>
+        <p class="message">Complete los datos del empleado</p>
+        
+        <!-- Nombre -->
+        <label>
+            <input class="input" type="text" id="name" placeholder="" required="">
+            <span>Nombre completo</span>
+            <span class="error-message" id="errorName"></span>
+        </label>
+        
+        <!-- Cargo -->
+        <label>
+            <input class="input" type="text" id="position" placeholder="" required="">
+            <span>Cargo</span>
+            <span class="error-message" id="errorPosition"></span>
+        </label>
+        
+        <!-- Salario y Horas extras -->
+        <div class="flex">
+            <label>
+                <input class="input" type="number" id="salary" placeholder="" required="">
+                <span>Salario base</span>
+                <span class="error-message" id="errorSalary"></span>
+            </label>
+
+            <label>
+                <input class="input" type="number" id="extraHours" placeholder="" required="">
+                <span>Horas extras</span>
+                <span class="error-message" id="errorExtraHours"></span>
+            </label>
+        </div>
+        
+        <!-- Resultado del cálculo -->
+        <div class="result-box" id="resultBox">
+            <p class="result-label">Salario Total:</p>
+            <p class="result-value" id="totalSalary">$0</p>
+        </div>
+        
+        <!-- Botón de envío -->
+        <button type="submit" class="submit">Calcular y Registrar</button>
+        
+        <!-- Mensaje de éxito/error -->
+        <div class="mensaje" id="mensaje"></div>
+    </form>
+
+    <script src="ejercicio4.js"></script>
+</body>
+</html>
