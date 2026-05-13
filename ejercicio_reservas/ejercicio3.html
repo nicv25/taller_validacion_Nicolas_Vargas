@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ejercicio3.css">
+    <title>Ejercicio 3 - Sistema de Reservas</title>
+</head>
+
+<body>
+    <form class="form" id="reservaForm">
+        <h2 class="form-title">Reserva tu Mesa</h2>
+        <p class="message">Complete el formulario para realizar su reserva</p>
+
+        <!-- Nombre completo -->
+        <label>
+            <input required="" placeholder="" type="text" class="input" id="nombre">
+            <span>Nombre completo</span>
+            <span class="error-message" id="errorNombre"></span>
+        </label>
+
+        <!-- Número de personas -->
+        <label>
+            <input required="" placeholder="" type="number" class="input" id="personas">
+            <span>Número de personas</span>
+            <span class="error-message" id="errorPersonas"></span>
+        </label>
+
+        <!-- Fecha y Hora -->
+        <div class="flex">
+            <label>
+                <input required="" placeholder="" type="date" class="input" id="fecha">
+                <span>Fecha</span>
+                <span class="error-message" id="errorFecha"></span>
+            </label>
+
+            <label>
+                <input required="" placeholder="" type="time" class="input" id="hora">
+                <span>Hora</span>
+                <span class="error-message" id="errorHora"></span>
+            </label>
+        </div>
+
+        <!-- Botón de envío -->
+        <button type="submit" class="fancy">
+            <span class="top-key"></span>
+            <span class="text">Reservar</span>
+            <span class="bottom-key-1"></span>
+            <span class="bottom-key-2"></span>
+        </button>
+
+        <!-- Mensaje de éxito/error -->
+        <div class="mensaje" id="mensaje"></div>
+    </form>
+
+    <script src="ejercicio3.js"></script>
+</body>
+
+</html>
